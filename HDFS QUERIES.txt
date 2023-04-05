@@ -1,0 +1,19 @@
+#FOR PROJECT API FILE 
+hdfs dfs -mkdir /user/root/project
+hdfs dfs -put ./project.json /user/root/project
+hdfs dfs -chmod 777 /user/root/project
+
+#FOR HISTORIC DATA
+hdfs dfs -mkdir /user/root/data
+hdfs dfs -put ./HD.csv /user/root/data
+hdfs dfs -chmod 777 /user/root/data
+
+#FOR CHECKPOINTLOCATION AND DATA STORING FROM KAFKA_TOPIC
+hdfs dfs -mkdir /user/root/D2
+hdfs dfs -mkdir /user/root/C2
+hdfs dfs -chmod 777 /user/root/D2
+hdfs dfs -chmod 777 /user/root/C2
+
+#FOR REMOVING EVERYTHING FROM DIRECTORY
+hdfs dfs -rm -R -f /user/root/D2/*
+hdfs dfs -rm -R -f /user/root/C2/*
